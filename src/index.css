@@ -207,6 +207,12 @@ a { text-decoration: none; }
   flex-shrink: 0;
 }
 .nav__logo span { color: var(--orange); }
+.nav__logo-img {
+  height: 36px;
+  width: auto;
+  display: block;
+  border-radius: var(--radius-sm);
+}
 .nav__links {
   display: flex;
   gap: 30px;
@@ -1261,6 +1267,13 @@ a { text-decoration: none; }
   margin-bottom: 12px;
 }
 .footer__brand-name span { color: var(--orange); }
+.footer__logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
+  border-radius: var(--radius-sm);
+  margin-bottom: 4px;
+}
 .footer__brand-desc {
   font-size: 13.5px;
   line-height: 1.7;

@@ -8,7 +8,9 @@ function Nav() {
   return (
     <nav className="nav">
       <div className="nav__inner">
-        <a href="#" className="nav__logo">N<span>-</span>ablly</a>
+        <a href="#" className="nav__logo">
+          <img src="/logo.svg" alt="N-ablly" className="nav__logo-img" />
+        </a>
         <div className="nav__links">
           <a href="#how">Product</a>
           <a href="#solutions">Solutions</a>
@@ -718,7 +720,9 @@ function Footer() {
       <div className="container">
         <div className="footer__grid">
           <div>
-            <div className="footer__brand-name">N<span>-</span>ablly</div>
+            <div className="footer__brand-name">
+              <img src="/logo.svg" alt="N-ablly" className="footer__logo-img" />
+            </div>
             <div className="footer__brand-desc">
               The AI execution layer for your business. Automate workflows end-to-end across every tool your company uses.
             </div>
