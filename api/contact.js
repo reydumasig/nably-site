@@ -14,8 +14,8 @@ export default async function handler(req, res) {
   }
 
   try {
-    await resend.emails.send({
-      from: 'N-ablly Contact Form <onboarding@resend.dev>',
+    const result = await resend.emails.send({
+      from: 'N-ablly <noreply@stormlearning.com>',
       to: ['dm@stormlearning.com', 'rey@stormlearning.com'],
       reply_to: email,
       subject: `New Demo Request — ${name} · ${company}`,
@@ -45,7 +45,7 @@ export default async function handler(req, res) {
             <tr>
               <td style="padding: 12px 16px; background: #F3F4F6; border-radius: 8px 8px 0 0;
                 font-size: 12px; font-weight: 700; color: #6B7785; text-transform: uppercase;
-                letter-spacing: .08em;">Email</td>
+                letter-spacing: .08em;">Work Email</td>
             </tr>
             <tr>
               <td style="padding: 12px 16px; border: 1px solid #E5E7EB; border-top: none;
@@ -67,7 +67,7 @@ export default async function handler(req, res) {
 
           <div style="margin-top: 32px; padding: 16px; background: #FFF7EE;
             border: 1px solid #FFE4BB; border-radius: 10px; font-size: 13px; color: #6B7785;">
-            Reply directly to this email to respond to ${name}.
+            Hit reply to respond directly to ${name} at ${email}.
           </div>
 
           <p style="margin-top: 28px; font-size: 12px; color: #9CA3AF;">
@@ -77,6 +77,7 @@ export default async function handler(req, res) {
       `,
     })
 
+    console.log('Resend result:', JSON.stringify(result))
     return res.status(200).json({ success: true })
   } catch (error) {
     console.error('Email send error:', error)
