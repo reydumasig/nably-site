@@ -15,7 +15,7 @@ function Nav() {
           <a href="#integrations">Integrations</a>
           <a href="#pricing">Pricing</a>
         </div>
-        <a href="#demo" className="btn btn--orange btn--sm">Request Demo</a>
+        <a href="#contact" className="btn btn--orange btn--sm">Request Demo</a>
       </div>
     </nav>
   )
@@ -45,7 +45,7 @@ function Hero() {
         </p>
         <p className="hero__tagline">From request → to resolution — without manual coordination.</p>
         <div className="hero__ctas">
-          <a href="#demo" className="btn btn--orange btn--lg">Request Demo</a>
+          <a href="#contact" className="btn btn--orange btn--lg">Request Demo</a>
           <a href="#how" className="btn btn--ghost-white btn--lg">See How It Works ↓</a>
         </div>
 
@@ -655,7 +655,7 @@ function ContactForm() {
               </div>
               <div className="contact__actions">
                 <button type="submit" className="btn btn--orange btn--lg">
-                  Request a Demo →
+                  Chat with Us →
                 </button>
                 <p className="contact__note">No commitment required. We'll reach out within 24 hours.</p>
               </div>
@@ -680,8 +680,8 @@ function FinalCTA() {
           See how N-ablly connects your systems and executes your operations —
           from request to resolution, automatically.
         </p>
-        <a href="mailto:hello@nably.ai" className="btn btn--orange btn--lg">
-          Request a Demo
+        <a href="#contact" className="btn btn--orange btn--lg">
+          Request Demo
         </a>
       </div>
     </section>
