@@ -208,7 +208,7 @@ a { text-decoration: none; }
 }
 .nav__logo span { color: var(--orange); }
 .nav__logo-img {
-  height: 36px;
+  height: 48px;
   width: auto;
   display: block;
   border-radius: var(--radius-sm);
@@ -1268,7 +1268,7 @@ a { text-decoration: none; }
 }
 .footer__brand-name span { color: var(--orange); }
 .footer__logo-img {
-  height: 44px;
+  height: 64px;
   width: auto;
   display: block;
   border-radius: var(--radius-sm);
