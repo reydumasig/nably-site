@@ -588,12 +588,32 @@ function Pricing() {
 function ContactForm() {
   const [form, setForm] = useState({ name: '', email: '', company: '' })
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
 
   const set = (k) => (e) => setForm(f => ({ ...f, [k]: e.target.value }))
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    setSubmitted(true)
+    setLoading(true)
+    setError('')
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+      if (res.ok) {
+        setSubmitted(true)
+      } else {
+        const data = await res.json()
+        setError(data.error || 'Something went wrong. Please try again.')
+      }
+    } catch {
+      setError('Could not send your message. Please try again.')
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -653,9 +673,10 @@ function ContactForm() {
                   />
                 </div>
               </div>
+              {error && <p className="contact__error">{error}</p>}
               <div className="contact__actions">
-                <button type="submit" className="btn btn--orange btn--lg">
-                  Chat with Us →
+                <button type="submit" className="btn btn--orange btn--lg" disabled={loading}>
+                  {loading ? 'Sending…' : 'Chat with Us →'}
                 </button>
                 <p className="contact__note">No commitment required. We'll reach out within 24 hours.</p>
               </div>
