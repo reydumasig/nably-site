@@ -583,45 +583,85 @@ function Pricing() {
 }
 
 /* =====================================================
-   TESTIMONIALS
+   CONTACT FORM
    ===================================================== */
-function Testimonials() {
-  const quotes = [
-    {
-      av: 'MR', name: 'Maria R.', role: 'Head of HR · BGC, Manila',
-      quote: 'Before N-ablly, every payroll request needed manual follow-up across three systems. Now workflows complete themselves — with a full audit trail we can actually show auditors.',
-    },
-    {
-      av: 'JD', name: 'Jericho D.', role: 'IT Manager · Cebu',
-      quote: 'We reduced internal IT tickets by more than 40% in the first month. Access provisioning that used to take two days now takes minutes.',
-    },
-    {
-      av: 'SC', name: 'Sarah C.', role: 'Finance Lead · Makati',
-      quote: "Finally something that doesn't just answer — it actually does the work. N-ablly connects our Sprout payroll, GreatDay attendance, and Workday in one flow.",
-    },
-  ]
+function ContactForm() {
+  const [form, setForm] = useState({ name: '', email: '', company: '' })
+  const [submitted, setSubmitted] = useState(false)
+
+  const set = (k) => (e) => setForm(f => ({ ...f, [k]: e.target.value }))
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    setSubmitted(true)
+  }
+
   return (
-    <section className="section section--grey testi">
-      <div className="container text-center">
-        <p className="section__eyebrow">Customer Stories</p>
-        <h2 className="section__title">What teams say about N-ablly</h2>
-      </div>
-      <div className="container">
-        <div className="testi__grid">
-          {quotes.map((q, i) => (
-            <div key={i} className="testi__card">
-              <div className="testi__stars">★★★★★</div>
-              <div className="testi__quote">{q.quote}</div>
-              <div className="testi__author">
-                <div className="testi__author-av">{q.av}</div>
-                <div>
-                  <div className="testi__author-name">{q.name}</div>
-                  <div className="testi__author-role">{q.role}</div>
+    <section className="section section--grey contact" id="contact">
+      <div className="container--narrow">
+        {submitted ? (
+          <div className="contact__success">
+            <div className="contact__success-icon">✓</div>
+            <h3 className="contact__success-h">We'll be in touch!</h3>
+            <p className="contact__success-sub">
+              Thanks for reaching out. Our team will contact you within 1 business day.
+            </p>
+          </div>
+        ) : (
+          <>
+            <div className="text-center">
+              <p className="section__eyebrow">Get Started</p>
+              <h2 className="section__title">Talk to our team</h2>
+              <p className="section__sub">
+                Tell us about your business and we'll show you how N-ablly can
+                automate your workflows end-to-end.
+              </p>
+            </div>
+            <form className="contact__form" onSubmit={handleSubmit} noValidate>
+              <div className="contact__fields">
+                <div className="contact__field">
+                  <label className="contact__label">Full Name</label>
+                  <input
+                    className="contact__input"
+                    type="text"
+                    placeholder="Maria Santos"
+                    value={form.name}
+                    onChange={set('name')}
+                    required
+                  />
+                </div>
+                <div className="contact__field">
+                  <label className="contact__label">Work Email</label>
+                  <input
+                    className="contact__input"
+                    type="email"
+                    placeholder="maria@company.com"
+                    value={form.email}
+                    onChange={set('email')}
+                    required
+                  />
+                </div>
+                <div className="contact__field">
+                  <label className="contact__label">Company Name</label>
+                  <input
+                    className="contact__input"
+                    type="text"
+                    placeholder="Acme Corp"
+                    value={form.company}
+                    onChange={set('company')}
+                    required
+                  />
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+              <div className="contact__actions">
+                <button type="submit" className="btn btn--orange btn--lg">
+                  Request a Demo →
+                </button>
+                <p className="contact__note">No commitment required. We'll reach out within 24 hours.</p>
+              </div>
+            </form>
+          </>
+        )}
       </div>
     </section>
   )
@@ -663,31 +703,14 @@ function Footer() {
             </div>
             <div className="footer__ph-badge">🇵🇭 Built for the Philippine Market</div>
           </div>
-          {[
-            {
-              title: 'Product',
-              links: ['How It Works', 'Integrations', 'Security', 'Changelog'],
-            },
-            {
-              title: 'Solutions',
-              links: ['HR Workflows', 'IT Workflows', 'Finance Ops', 'Admin & Procurement'],
-            },
-            {
-              title: 'Company',
-              links: ['About', 'Blog', 'Careers', 'Contact'],
-            },
-            {
-              title: 'Legal',
-              links: ['Privacy Policy', 'Terms of Service', 'Security', 'Compliance'],
-            },
-          ].map((col, i) => (
-            <div key={i}>
-              <div className="footer__col-title">{col.title}</div>
-              <div className="footer__links">
-                {col.links.map(l => <a key={l} href="#">{l}</a>)}
-              </div>
+          <div>
+            <div className="footer__col-title">Product</div>
+            <div className="footer__links">
+              {['How It Works', 'Integrations', 'Security', 'Changelog'].map(l => (
+                <a key={l} href="#">{l}</a>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
         <div className="footer__bottom">
           <span>© 2026 N-ablly. All rights reserved.</span>
@@ -714,7 +737,7 @@ export default function App() {
       <Differentiation />
       <Governance />
       <Pricing />
-      <Testimonials />
+      <ContactForm />
       <FinalCTA />
       <Footer />
     </>
