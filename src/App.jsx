@@ -8,7 +8,7 @@ function Nav() {
   return (
     <nav className="nav">
       <div className="nav__inner">
-        <a href="#" className="nav__logo">N<span>-</span>ably</a>
+        <a href="#" className="nav__logo">N<span>-</span>ablly</a>
         <div className="nav__links">
           <a href="#how">Product</a>
           <a href="#solutions">Solutions</a>
@@ -39,7 +39,7 @@ function Hero() {
           across systems — not just<br />answers questions
         </h1>
         <p className="hero__sub">
-          N-ably is the AI execution layer for your business.
+          N-ablly is the AI execution layer for your business.
           Automate HR, IT, Finance, and Admin workflows end-to-end —
           across every tool your company already uses.
         </p>
@@ -57,7 +57,7 @@ function Hero() {
             },
             null,
             {
-              num: '02', icon: '✦', title: 'N-ably understands & orchestrates',
+              num: '02', icon: '✦', title: 'N-ablly understands & orchestrates',
               desc: 'Connects to your systems, gathers data', cls: 'flow-step--ai',
             },
             null,
@@ -135,7 +135,7 @@ function CoreValue() {
             </div>
           </div>
           <div className="core-value__resolve">
-            <div className="core-value__resolve-title">N-ably fixes that.</div>
+            <div className="core-value__resolve-title">N-ablly fixes that.</div>
             <div className="core-value__resolve-body">
               We turn requests into executed workflows across your systems — automatically.
               No manual handoffs. No re-keying data. No follow-up Slack messages asking
@@ -180,11 +180,11 @@ function HowItWorks() {
   return (
     <section className="hiw section--grey" id="how">
       <div className="container text-center">
-        <p className="section__eyebrow">How N-ably Works</p>
+        <p className="section__eyebrow">How N-ablly Works</p>
         <h2 className="section__title">Four steps. Zero manual coordination.</h2>
         <p className="section__sub">
           From the moment a request is submitted to the moment it's resolved —
-          N-ably handles every step.
+          N-ablly handles every step.
         </p>
       </div>
       <div className="container">
@@ -250,7 +250,7 @@ function Integrations() {
         <p className="section__eyebrow">Integrations</p>
         <h2 className="section__title">One AI layer across all your systems</h2>
         <p className="section__sub">
-          N-ably integrates with the tools your business already uses —
+          N-ablly integrates with the tools your business already uses —
           no rip and replace required.
         </p>
       </div>
@@ -416,7 +416,7 @@ function Differentiation() {
   return (
     <section className="section section--grey diff">
       <div className="container text-center">
-        <p className="section__eyebrow">Why N-ably</p>
+        <p className="section__eyebrow">Why N-ablly</p>
         <h2 className="section__title">Not another AI assistant</h2>
         <p className="section__sub">
           There's a critical difference between AI that responds and AI that resolves.
@@ -446,7 +446,7 @@ function Differentiation() {
             <span className="diff__divider-label">vs</span>
           </div>
           <div className="diff__col diff__col--us">
-            <div className="diff__col-title">N-ably</div>
+            <div className="diff__col-title">N-ablly</div>
             <div className="diff__items">
               {[
                 'Executes workflows end-to-end',
@@ -482,7 +482,7 @@ function Governance() {
     {
       icon: '👤',
       title: 'Human-in-the-loop approvals',
-      desc: 'N-ably never acts without the right people approving. Every workflow can require sign-off before execution.',
+      desc: 'N-ablly never acts without the right people approving. Every workflow can require sign-off before execution.',
     },
     {
       icon: '📋',
@@ -548,7 +548,7 @@ function Pricing() {
         <p className="section__eyebrow">Pricing</p>
         <h2 className="section__title">Flexible usage-based pricing</h2>
         <p className="section__sub">
-          N-ably uses a token-based model aligned with actual usage.
+          N-ablly uses a token-based model aligned with actual usage.
           You only pay for outcomes — not AI activity.
         </p>
       </div>
@@ -589,7 +589,7 @@ function Testimonials() {
   const quotes = [
     {
       av: 'MR', name: 'Maria R.', role: 'Head of HR · BGC, Manila',
-      quote: 'Before N-ably, every payroll request needed manual follow-up across three systems. Now workflows complete themselves — with a full audit trail we can actually show auditors.',
+      quote: 'Before N-ablly, every payroll request needed manual follow-up across three systems. Now workflows complete themselves — with a full audit trail we can actually show auditors.',
     },
     {
       av: 'JD', name: 'Jericho D.', role: 'IT Manager · Cebu',
@@ -597,14 +597,14 @@ function Testimonials() {
     },
     {
       av: 'SC', name: 'Sarah C.', role: 'Finance Lead · Makati',
-      quote: "Finally something that doesn't just answer — it actually does the work. N-ably connects our Sprout payroll, GreatDay attendance, and Workday in one flow.",
+      quote: "Finally something that doesn't just answer — it actually does the work. N-ablly connects our Sprout payroll, GreatDay attendance, and Workday in one flow.",
     },
   ]
   return (
     <section className="section section--grey testi">
       <div className="container text-center">
         <p className="section__eyebrow">Customer Stories</p>
-        <h2 className="section__title">What teams say about N-ably</h2>
+        <h2 className="section__title">What teams say about N-ablly</h2>
       </div>
       <div className="container">
         <div className="testi__grid">
@@ -637,7 +637,7 @@ function FinalCTA() {
       <div className="final-cta__inner">
         <h2 className="final-cta__h">Turn requests into<br />completed workflows</h2>
         <p className="final-cta__sub">
-          See how N-ably connects your systems and executes your operations —
+          See how N-ablly connects your systems and executes your operations —
           from request to resolution, automatically.
         </p>
         <a href="mailto:hello@nably.ai" className="btn btn--orange btn--lg">
@@ -657,7 +657,7 @@ function Footer() {
       <div className="container">
         <div className="footer__grid">
           <div>
-            <div className="footer__brand-name">N<span>-</span>ably</div>
+            <div className="footer__brand-name">N<span>-</span>ablly</div>
             <div className="footer__brand-desc">
               The AI execution layer for your business. Automate workflows end-to-end across every tool your company uses.
             </div>
@@ -690,7 +690,7 @@ function Footer() {
           ))}
         </div>
         <div className="footer__bottom">
-          <span>© 2026 N-ably. All rights reserved.</span>
+          <span>© 2026 N-ablly. All rights reserved.</span>
           <span>Execution layer across systems — not just AI answers.</span>
         </div>
       </div>

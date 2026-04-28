@@ -5,11 +5,11 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --navy:        #00167A;
-  --navy-900:    #000D4E;
-  --navy-800:    #001166;
-  --navy-100:    #D6DEFF;
-  --navy-50:     #EEF1FF;
+  --navy:        #2D353D;
+  --navy-900:    #1A2027;
+  --navy-800:    #232C34;
+  --navy-100:    #D1D5DB;
+  --navy-50:     #F3F4F6;
   --orange:      #FB8F23;
   --orange-700:  #D97206;
   --orange-100:  #FFE4BB;
@@ -183,7 +183,7 @@ a { text-decoration: none; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(0, 22, 122, .97);
+  background: rgba(45, 53, 61, .97);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(255,255,255,.07);
@@ -255,7 +255,7 @@ a { text-decoration: none; }
   position: absolute;
   bottom: -80px; left: -80px;
   width: 400px; height: 400px;
-  background: radial-gradient(circle, rgba(100,130,255,.14) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(150,165,175,.12) 0%, transparent 65%);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -473,7 +473,7 @@ a { text-decoration: none; }
   font-weight: 600;
 }
 .core-value__resolve {
-  background: linear-gradient(135deg, var(--navy) 0%, #001E9A 100%);
+  background: linear-gradient(135deg, var(--navy) 0%, #3D4A54 100%);
   border-radius: var(--radius-xl);
   padding: 44px 40px;
   color: #fff;
